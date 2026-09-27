@@ -70,9 +70,10 @@ h1, h2 {
 }
 
 hr {
-    color: var(--ctp-mocha-surface1);
     margin-top: 1rem;
     margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid var(--ctp-mocha-surface1);
 }
 
 button {
@@ -266,7 +267,7 @@ input[type="text"] {
     align-items: center;
 }
 
-.info-span {
+.info-div {
     padding-left: 0.5rem;
 }
 

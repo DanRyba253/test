@@ -171,18 +171,22 @@ for (i in questions) {
     comment_start = document.createElement("span")
     comment_start.className = "comment"
     comment_start.innerHTML = "/*"
+    
+    info_div = document.createElement("div")
+    info_div.className = "info-div"
 
     info_span = document.createElement("span")
-    info_span.className = "info-span comment"
+    info_span.className = "comment"
     info_span.innerHTML = question.info
+    info_div.append(info_span)
 
     comment_end = document.createElement("span")
     comment_end.className = "comment"
     comment_end.innerHTML = "*/"
 
-    panel.append(document.createElement("br"), comment_start, document.createElement("br"), info_span, document.createElement("br"), comment_end)
+    panel.append(document.createElement("br"), comment_start, info_div, comment_end)
 
-    results.append(header, subheader, panel, document.createElement("hr"))
+    results.append(document.createElement("hr"), header, subheader, panel)
 }
 
 
